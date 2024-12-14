@@ -59,16 +59,16 @@ public class App {
         }
     }
     public static String getMarketStatus() {
-        // Get the current time in Eastern Time
+        
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
         dateFormat.setTimeZone(TimeZone.getTimeZone("America/New_York"));
         String currentTime = dateFormat.format(new Date());
 
-        // Define market open and close times
+        
         String marketOpenTime = "09:30";
         String marketCloseTime = "16:00";
 
-        // Compare the current time with market open and close times
+        
         if (currentTime.compareTo(marketOpenTime) >= 0 && currentTime.compareTo(marketCloseTime) <= 0) {
             return "Market is Open";
         } else {
